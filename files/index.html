@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Friendly Cricket Match | MESS vs Pre-Medicine</title>
+<meta name="description" content="Friendly Cricket Match — Pre-Engineering Students vs Pre-Medicine Students. 11 July 2026, TC Ground, Monaragala." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Anton&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loader">
+  <div class="loader-ball"></div>
+  <p>Loading the pitch<span class="dots"><span>.</span><span>.</span><span>.</span></span></p>
+</div>
+
+<!-- Scroll progress bar -->
+<div id="progress-bar"></div>
+
+<!-- Mouse glow -->
+<div id="mouse-glow"></div>
+
+<!-- Floating particles canvas -->
+<canvas id="particles"></canvas>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo">🏏 Friendly Cricket Match</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#countdown">Countdown</a></li>
+      <li><a href="#event">Event</a></li>
+      <li><a href="#teams">Teams</a></li>
+      <li><a href="#follow">Follow Us</a></li>
+      <li><a href="#developer">Developer</a></li>
+    </ul>
+    <button id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="floating-ball" id="floating-ball">🏏</div>
+
+  <div class="hero-content">
+    <p class="eyebrow">MESS × Pre-Medicine · TC Ground</p>
+    <h1 class="hero-title">🏏 Friendly Cricket Match</h1>
+    <p class="hero-subtitle">
+      <span class="team-name team-eng">Pre-Engineering Students</span>
+      <span class="vs-text">VS</span>
+      <span class="team-name team-med">Pre-Medicine Students</span>
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#countdown" class="glow-btn primary">📅 11 JULY 2026</a>
+      <a href="#event" class="glow-btn secondary">📍 TC Ground, Monaragala</a>
+    </div>
+
+    <a href="#countdown" class="scroll-cue" aria-label="Scroll down">
+      <span></span>
+    </a>
+  </div>
+</header>
+
+<!-- Countdown Section -->
+<section id="countdown" class="section countdown-section">
+  <div class="section-heading">
+    <p class="eyebrow">The wait is almost over</p>
+    <h2>Live Countdown</h2>
+  </div>
+
+  <div class="countdown-grid">
+    <div class="flip-card">
+      <span class="flip-number" id="days">00</span>
+      <span class="flip-label">Days</span>
+    </div>
+    <div class="flip-card">
+      <span class="flip-number" id="hours">00</span>
+      <span class="flip-label">Hours</span>
+    </div>
+    <div class="flip-card">
+      <span class="flip-number" id="minutes">00</span>
+      <span class="flip-label">Minutes</span>
+    </div>
+    <div class="flip-card">
+      <span class="flip-number" id="seconds">00</span>
+      <span class="flip-label">Seconds</span>
+    </div>
+  </div>
+  <p class="countdown-footnote" id="countdown-footnote">Counting down to 11 July 2026 · TC Ground, Monaragala</p>
+</section>
+
+<!-- Match Details -->
+<section id="event" class="section details-section">
+  <div class="section-heading">
+    <p class="eyebrow">All the essentials</p>
+    <h2>Match Details</h2>
+  </div>
+
+  <div class="details-wrapper">
+    <div class="glass-card details-card">
+      <ul class="details-list">
+        <li>
+          <span class="detail-icon">🏏</span>
+          <div>
+            <h4>Event</h4>
+            <p>Friendly Cricket Match</p>
+          </div>
+        </li>
+        <li>
+          <span class="detail-icon">📅</span>
+          <div>
+            <h4>Date</h4>
+            <p>11 July 2026</p>
+          </div>
+        </li>
+        <li>
+          <span class="detail-icon">📍</span>
+          <div>
+            <h4>Venue</h4>
+            <p>TC Ground, Monaragala</p>
+          </div>
+        </li>
+        <li>
+          <span class="detail-icon">🏆</span>
+          <div>
+            <h4>Teams</h4>
+            <p>MESS (Pre-Engineering Students) <span class="vs-inline">VS</span> Pre-Medicine Students</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="glass-card poster-card">
+      <img src="assets/poster.png" alt="Friendly Cricket Match event poster" id="poster-img" />
+      <p class="poster-hint">Tap poster to enlarge</p>
+    </div>
+  </div>
+</section>
+
+<!-- Poster Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span id="lightbox-close" class="lightbox-close">&times;</span>
+  <img id="lightbox-img" src="assets/poster.png" alt="Event poster enlarged" />
+</div>
+
+<!-- Match Information -->
+<section id="teams" class="section info-section">
+  <div class="section-heading">
+    <p class="eyebrow">Why we play</p>
+    <h2>Match Information</h2>
+  </div>
+
+  <div class="info-grid">
+    <div class="glass-card info-card">
+      <div class="info-icon">🎯</div>
+      <h3>Friendly Competition</h3>
+      <p>A day of sportsmanship, team spirit, friendship, and unforgettable memories.</p>
+    </div>
+    <div class="glass-card info-card">
+      <div class="info-icon">🏏</div>
+      <h3>Cricket</h3>
+      <p>Show your support, cheer for your team, and enjoy an exciting cricket battle.</p>
+    </div>
+    <div class="glass-card info-card">
+      <div class="info-icon">🤝</div>
+      <h3>Unity</h3>
+      <p>Engineering and Medicine coming together through sports.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Follow Us -->
+<section id="follow" class="section follow-section">
+  <div class="section-heading">
+    <p class="eyebrow">Stay in the loop</p>
+    <h2>Follow Us</h2>
+    <p class="section-sub">Stay updated with our latest events and activities.</p>
+  </div>
+
+  <div class="glass-card facebook-card">
+    <div class="fb-icon">
+      <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94Z"/></svg>
+    </div>
+    <h3>Monaragala Engineering Students Society (MESS)</h3>
+    <p>Follow our official Facebook page for match updates, photos, and future events.</p>
+    <a href="https://www.facebook.com/share/1EBhgLyiys/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="glow-btn primary">
+      Visit Facebook Page
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="developer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>Product Concept</h4>
+      <p>Monaragala Engineering Students Society (MESS)</p>
+    </div>
+    <div class="footer-col center">
+      <p>© 2026 Friendly Cricket Match</p>
+      <p>All Rights Reserved</p>
+    </div>
+    <div class="footer-col right">
+      <h4>Web Developer</h4>
+      <p>Isandu Jayasinghe</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<button id="scroll-top" aria-label="Scroll to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
